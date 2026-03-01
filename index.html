@@ -18,6 +18,7 @@
     }
 
     *{box-sizing:border-box}
+
     body{
       margin:0;
       font-family:system-ui,Segoe UI,Roboto;
@@ -98,6 +99,27 @@
       padding:20px;
       border-radius:var(--radius);
       margin-bottom:20px;
+      transition:0.3s ease;
+    }
+
+    /* NUEVO: card clickeable */
+    .card-link{
+      display:block;
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .card-link:hover{
+      transform:translateY(-6px);
+      box-shadow:0 15px 35px rgba(0,0,0,0.4);
+      border:1px solid rgba(106,169,255,0.5);
+    }
+
+    .ver-mas{
+      display:inline-block;
+      margin-top:15px;
+      color:var(--accent);
+      font-weight:600;
     }
 
     footer{
@@ -135,7 +157,7 @@
   <div class="hero">
     <img src="logo-nm.png" alt="Logo NM Grande">
 
-  <h1>Desarrollador de Software | Backend & IA</h1>
+    <h1>Desarrollador de Software | Backend & IA</h1>
     <p class="subtitle">
       Desarrollo soluciones backend con Django, SQL e inteligencia artificial.
       Apasionado por la automatización y la arquitectura limpia.
@@ -146,11 +168,20 @@
   <section id="proyectos" class="container">
     <h2>Proyectos Destacados</h2>
 
-    <div class="card">
-      <h3>NUAM – Sistema de Gestión</h3>
-      <p>Backend modular con Django, validación de datos, arquitectura 4+1 y metodología SCRUM.</p>
-    </div>
+    <!-- NUAM CLICKEABLE -->
+    <a href="https://github.com/NicolasMorales311096/nuam-backend"
+       target="_blank"
+       class="card card-link">
 
+      <h3>NUAM – Backend de Gestión</h3>
+      <p>
+        Backend desarrollado en Django con arquitectura modular,
+        validación de datos y metodología SCRUM.
+      </p>
+      <span class="ver-mas">Ver Repositorio →</span>
+    </a>
+
+    <!-- AI TICKET BUILDER NORMAL (LO HACEMOS DESPUÉS) -->
     <div class="card">
       <h3>AI Ticket Builder</h3>
       <p>Aplicación web con IA desarrollada en Python y Streamlit para automatizar generación de tickets.</p>
