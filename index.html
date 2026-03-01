@@ -40,100 +40,45 @@
       background:#0b1020;
       position:sticky;
       top:0;
+      z-index:10;
     }
 
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
+    .logo{display:flex;align-items:center;gap:12px;}
+    .logo img{height:40px;}
+    .logo span{font-weight:700;font-size:18px;}
 
-    .logo img{
-      height:40px;
-    }
-
-    .logo span{
-      font-weight:700;
-      font-size:18px;
-    }
-
-    .links{
-      display:flex;
-      gap:16px;
-      color:var(--muted);
-    }
-
-    .links a:hover{
-      color:var(--text);
-    }
+    .links{display:flex;gap:16px;color:var(--muted);}
+    .links a:hover{color:var(--text);}
 
     /* HERO */
-    .hero{
-      text-align:center;
-      padding:60px 20px;
-    }
+    .hero{text-align:center;padding:60px 20px;}
+    .hero img{width:200px;margin-bottom:30px;}
 
-    .hero img{
-      width:200px;
-      margin-bottom:30px;
-    }
-
-    h1{
-      font-size:42px;
-      margin:0 0 10px 0;
-    }
-
-    .subtitle{
-      color:var(--muted);
-      max-width:600px;
-      margin:auto;
-    }
+    h1{font-size:42px;margin:0 0 10px 0;}
+    .subtitle{color:var(--muted);max-width:600px;margin:auto;line-height:1.6;}
 
     /* SECTION */
-    section{
-      padding:50px 0;
-    }
+    section{padding:50px 0;}
 
-    .card{
-      background:var(--card);
-      padding:20px;
-      border-radius:var(--radius);
-      margin-bottom:20px;
-      transition:0.3s ease;
-    }
+    .card{background:var(--card);padding:20px;border-radius:var(--radius);margin-bottom:20px;border:1px solid transparent;transition:0.25s ease;}
 
-    /* NUEVO: card clickeable */
-    .card-link{
-      display:block;
-      text-decoration:none;
-      color:inherit;
-    }
+    .card-link{display:block;color:inherit;}
+    .card-link:hover{transform:translateY(-6px);box-shadow:0 15px 35px rgba(0,0,0,0.4);border:1px solid rgba(106,169,255,0.45);cursor:pointer;}
 
-    .card-link:hover{
-      transform:translateY(-6px);
-      box-shadow:0 15px 35px rgba(0,0,0,0.4);
-      border:1px solid rgba(106,169,255,0.5);
-    }
+    .card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
 
-    .ver-mas{
-      display:inline-block;
-      margin-top:15px;
-      color:var(--accent);
-      font-weight:600;
-    }
+    .pill{font-size:12px;color:var(--muted);border:1px solid rgba(255,255,255,.12);padding:6px 10px;border-radius:999px;}
 
-    footer{
-      text-align:center;
-      padding:40px 0;
-      color:var(--muted);
-      border-top:1px solid var(--line);
-      margin-top:40px;
-    }
+    .actions{display:flex;gap:12px;align-items:center;margin-top:14px;flex-wrap:wrap;}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;font-weight:700;background:rgba(106,169,255,.15);border:1px solid rgba(106,169,255,.35);color:var(--text);}
+    .btn:hover{background:rgba(106,169,255,.22);}
 
-    @media(max-width:768px){
-      h1{font-size:30px}
-      .hero img{width:150px}
-    }
+    .link-soft{color:var(--accent);font-weight:600;opacity:.95;}
+    .link-soft:hover{opacity:1;text-decoration:underline;}
+
+    footer{text-align:center;padding:40px 0;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;}
+
+    @media(max-width:768px){h1{font-size:30px}.hero img{width:150px}}
   </style>
 </head>
 
@@ -156,11 +101,9 @@
   <!-- HERO -->
   <div class="hero">
     <img src="logo-nm.png" alt="Logo NM Grande">
-
     <h1>Desarrollador de Software | Backend & IA</h1>
     <p class="subtitle">
-      Desarrollo soluciones backend con Django, SQL e inteligencia artificial.
-      Apasionado por la automatización y la arquitectura limpia.
+      Desarrollo soluciones backend con Django, Python y aplicaciones con IA.
     </p>
   </div>
 
@@ -168,49 +111,54 @@
   <section id="proyectos" class="container">
     <h2>Proyectos Destacados</h2>
 
-    <!-- NUAM CLICKEABLE -->
-    <a href="https://github.com/NicolasMorales311096/nuam-backend"
-       target="_blank"
-       class="card card-link">
-
-      <h3>NUAM – Backend de Gestión</h3>
-      <p>
-        Backend desarrollado en Django con arquitectura modular,
-        validación de datos y metodología SCRUM.
+    <!-- NUAM -->
+    <a href="https://nuam-backend-4g9s.onrender.com/" target="_blank" rel="noopener" class="card card-link">
+      <div class="card-top">
+        <h3 style="margin:0;">NUAM – Sistema de Gestión</h3>
+        <span class="pill">Django · SQLite · autenticación · CRUD</span>
+      </div>
+      <p style="margin:12px 0 0 0; color:var(--muted);">
+        Plataforma web para gestionar registros con autenticación, filtros y auditoría.
       </p>
-      <span class="ver-mas">Ver Repositorio →</span>
+      <div class="actions">
+        <span class="btn">Ver demo →</span>
+        <a class="link-soft" href="https://github.com/NicolasMorales311096/nuam-backend" target="_blank" rel="noopener">Ver código →</a>
+      </div>
     </a>
 
-    <!-- AI TICKET BUILDER NORMAL (LO HACEMOS DESPUÉS) -->
-    <div class="card">
-      <h3>AI Ticket Builder</h3>
-      <p>Aplicación web con IA desarrollada en Python y Streamlit para automatizar generación de tickets.</p>
-    </div>
+    <!-- AI Ticket Builder -->
+    <a href="https://nicolasmorales311096-ai-ticket-builde-app-emgeix.streamlit.app/" target="_blank" rel="noopener" class="card card-link">
+      <div class="card-top">
+        <h3 style="margin:0;">AI Ticket Builder</h3>
+        <span class="pill">Streamlit · IA · Automatización</span>
+      </div>
+      <p style="margin:12px 0 0 0; color:var(--muted);">
+        App web con IA para generar tickets automáticamente desde una interfaz simple.
+      </p>
+      <div class="actions">
+        <span class="btn">Ver demo →</span>
+        <a class="link-soft" href="https://github.com/NicolasMorales311096/ai-ticket-builde" target="_blank" rel="noopener">Ver código →</a>
+      </div>
+    </a>
 
   </section>
 
   <!-- SKILLS -->
   <section id="skills" class="container">
     <h2>Stack Tecnológico</h2>
-
-    <div class="card">
-      <p>Python · Django · SQL · Oracle · SQLite · Git · UML · SCRUM</p>
-    </div>
+    <div class="card"><p>Python · Django · SQL · Streamlit · IA · Git · SCRUM</p></div>
   </section>
 
   <!-- CONTACTO -->
   <section id="contacto" class="container">
     <h2>Contacto</h2>
-
     <div class="card">
       <p>Email: nicolas.morales3196@gmail.com</p>
       <p>GitHub: github.com/NicolasMorales311096</p>
     </div>
   </section>
 
-  <footer>
-    © 2026 Nicolás Morales
-  </footer>
+  <footer>© 2026 Nicolás Morales</footer>
 
 </body>
 </html>
