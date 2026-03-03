@@ -60,25 +60,88 @@
     /* SECTION */
     section{padding:50px 0;}
 
-    .card{background:var(--card);padding:20px;border-radius:var(--radius);margin-bottom:20px;border:1px solid transparent;transition:0.25s ease;}
+    .card{
+      background:var(--card);
+      padding:20px;
+      border-radius:var(--radius);
+      margin-bottom:20px;
+      border:1px solid transparent;
+      transition:0.25s ease;
+    }
 
-    .card-link{display:block;color:inherit;}
-    .card-link:hover{transform:translateY(-6px);box-shadow:0 15px 35px rgba(0,0,0,0.4);border:1px solid rgba(106,169,255,0.45);cursor:pointer;}
+    .card-link{
+      display:block;
+      color:inherit;
+    }
 
-    .card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+    .card-link:hover{
+      transform:translateY(-6px);
+      box-shadow:0 15px 35px rgba(0,0,0,0.4);
+      border:1px solid rgba(106,169,255,0.45);
+      cursor:pointer;
+    }
 
-    .pill{font-size:12px;color:var(--muted);border:1px solid rgba(255,255,255,.12);padding:6px 10px;border-radius:999px;}
+    .card-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
 
-    .actions{display:flex;gap:12px;align-items:center;margin-top:14px;flex-wrap:wrap;}
-    .btn{display:inline-block;padding:10px 14px;border-radius:12px;font-weight:700;background:rgba(106,169,255,.15);border:1px solid rgba(106,169,255,.35);color:var(--text);}
-    .btn:hover{background:rgba(106,169,255,.22);}
+    .pill{
+      font-size:12px;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,.12);
+      padding:6px 10px;
+      border-radius:999px;
+    }
 
-    .link-soft{color:var(--accent);font-weight:600;opacity:.95;}
-    .link-soft:hover{opacity:1;text-decoration:underline;}
+    .actions{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin-top:14px;
+      flex-wrap:wrap;
+    }
 
-    footer{text-align:center;padding:40px 0;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;}
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:12px;
+      font-weight:700;
+      background:rgba(106,169,255,.15);
+      border:1px solid rgba(106,169,255,.35);
+      color:var(--text);
+    }
 
-    @media(max-width:768px){h1{font-size:30px}.hero img{width:150px}}
+    .btn:hover{
+      background:rgba(106,169,255,.22);
+    }
+
+    .link-soft{
+      color:var(--accent);
+      font-weight:600;
+      opacity:.95;
+    }
+
+    .link-soft:hover{
+      opacity:1;
+      text-decoration:underline;
+    }
+
+    footer{
+      text-align:center;
+      padding:40px 0;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+      margin-top:40px;
+    }
+
+    @media(max-width:768px){
+      h1{font-size:30px}
+      .hero img{width:150px}
+    }
   </style>
 </head>
 
@@ -103,7 +166,7 @@
     <img src="logo-nm.png" alt="Logo NM Grande">
     <h1>Desarrollador de Software | Backend & IA</h1>
     <p class="subtitle">
-      Desarrollo soluciones backend con Django, Python y aplicaciones con IA.
+      Desarrollo soluciones backend con Django, Python y aplicaciones con Inteligencia Artificial.
     </p>
   </div>
 
@@ -115,10 +178,10 @@
     <a href="https://nuam-backend-4g9s.onrender.com/" target="_blank" rel="noopener" class="card card-link">
       <div class="card-top">
         <h3 style="margin:0;">NUAM – Sistema de Gestión</h3>
-        <span class="pill">Django · SQLite · autenticación · CRUD</span>
+        <span class="pill">Django · SQLite · Autenticación · CRUD</span>
       </div>
       <p style="margin:12px 0 0 0; color:var(--muted);">
-        Plataforma web para gestionar registros con autenticación, filtros y auditoría.
+        Plataforma web para gestionar registros con autenticación, filtros avanzados y auditoría.
       </p>
       <div class="actions">
         <span class="btn">Ver demo →</span>
@@ -133,11 +196,26 @@
         <span class="pill">Streamlit · IA · Automatización</span>
       </div>
       <p style="margin:12px 0 0 0; color:var(--muted);">
-        App web con IA para generar tickets automáticamente desde una interfaz simple.
+        Aplicación web con IA que genera tickets automáticamente desde una interfaz simple y eficiente.
       </p>
       <div class="actions">
         <span class="btn">Ver demo →</span>
         <a class="link-soft" href="https://github.com/NicolasMorales311096/ai-ticket-builde" target="_blank" rel="noopener">Ver código →</a>
+      </div>
+    </a>
+
+    <!-- CinGuía -->
+    <a href="https://cinguia.onrender.com/" target="_blank" rel="noopener" class="card card-link">
+      <div class="card-top">
+        <h3 style="margin:0;">CinGuía – Buscador de Películas</h3>
+        <span class="pill">Django · API REST · Fetch · Frontend Dinámico</span>
+      </div>
+      <p style="margin:12px 0 0 0; color:var(--muted);">
+        Plataforma web que permite buscar películas mediante una API personalizada, mostrando resultados dinámicos con filtros y diseño moderno.
+      </p>
+      <div class="actions">
+        <span class="btn">Ver demo →</span>
+        <a class="link-soft" href="https://github.com/NicolasMorales311096" target="_blank" rel="noopener">Ver código →</a>
       </div>
     </a>
 
@@ -146,7 +224,9 @@
   <!-- SKILLS -->
   <section id="skills" class="container">
     <h2>Stack Tecnológico</h2>
-    <div class="card"><p>Python · Django · SQL · Streamlit · IA · Git · SCRUM</p></div>
+    <div class="card">
+      <p>Python · Django · SQL · Streamlit · REST APIs · IA · Git · SCRUM</p>
+    </div>
   </section>
 
   <!-- CONTACTO -->
