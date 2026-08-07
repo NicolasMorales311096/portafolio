@@ -56,7 +56,7 @@
     .hero img { width: 160px; height: 160px; border-radius: 50%; margin-bottom: 24px; border: 2px solid rgba(106, 169, 255, 0.3); }
 
     h1 { font-size: 40px; margin: 0 0 12px 0; font-weight: 800; }
-    .subtitle { color: var(--muted); max-width: 680px; margin: auto; line-height: 1.6; font-size: 17px; }
+    .subtitle { color: var(--muted); max-width: 720px; margin: auto; line-height: 1.6; font-size: 17px; }
 
     section { padding: 30px 0; }
     h2 { font-size: 24px; margin-bottom: 20px; border-left: 4px solid var(--accent); padding-left: 12px; }
@@ -150,6 +150,10 @@
     .skill-card strong { color: var(--accent); display: block; margin-bottom: 8px; font-size: 16px; }
     .skill-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
 
+    /* EXPERIENCIA Y CERTIFICACIONES */
+    .list-inline { display: flex; gap: 10px; flex-wrap: wrap; padding: 0; list-style: none; margin: 10px 0 0 0; }
+    .cert-badge { background: rgba(255,255,255,0.05); padding: 8px 14px; border-radius: 10px; border: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+
     footer {
       text-align: center;
       padding: 40px 0;
@@ -177,6 +181,7 @@
     </div>
 
     <nav class="links">
+      <a href="#experiencia">Experiencia</a>
       <a href="#proyectos">Proyectos</a>
       <a href="#skills">Stack</a>
       <a href="#contacto">Contacto</a>
@@ -186,30 +191,64 @@
   <!-- HERO -->
   <main>
     <section class="hero">
-      <img src="logo-nm.png" alt="Nicolás Morales">
+      <img src="logo-nm.png" alt="Nicolás Morales Díaz">
       <h1>Digital Product Builder & Software Developer</h1>
       <p class="subtitle">
-        Diseño y desarrollo <strong>productos digitales funcionales</strong> de principio a fin. Especializado en arquitectura backend con <strong>Python y Django</strong>, integración de herramientas de <strong>Inteligencia Artificial</strong> y desarrollo de interfaces dinámicas e interactivas.
+        <strong>Analista Programador Titulado</strong> con experiencia en desarrollo web Full Stack. Especializado en el diseño de arquitecturas robustas (<strong>Python, PHP, Java, C#</strong>), gestión de bases de datos relacionales y NoSQL, e integración de herramientas de <strong>Inteligencia Artificial y Automatización</strong>.
       </p>
+    </section>
+
+    <!-- EXPERIENCIA DESTACADA -->
+    <section id="experiencia" class="container">
+      <h2>Experiencia Profesional</h2>
+      
+      <article class="card">
+        <div class="card-top">
+          <h3 style="margin:0; font-size: 20px;">Encargado de Área de Analistas (Práctica Profesional)</h3>
+          <span class="pill" style="color: var(--text); border-color: rgba(255,255,255,0.2);">C&C Consultores (2025 - 2026)</span>
+        </div>
+        <ul style="color: var(--muted); line-height: 1.6; margin: 14px 0 0 0; padding-left: 20px;">
+          <li>Desarrollo y mantenimiento de aplicaciones web con <strong>PHP y MySQL</strong>[cite: 1].</li>
+          <li>Desarrollo activo del sistema corporativo <code>certificados_cyc</code>, liderando el diseño y gestión de la base de datos[cite: 1].</li>
+          <li>Soporte técnico continuo, resolución de incidencias y gestión de tareas en equipo con <strong>Jira y GitHub</strong>[cite: 1].</li>
+          <li>Despliegue y administración de entornos con <strong>XAMPP y cPanel</strong>[cite: 1].</li>
+        </ul>
+      </article>
     </section>
 
     <!-- PROYECTOS -->
     <section id="proyectos" class="container">
       <h2>Proyectos Destacados</h2>
 
+      <!-- Certificados C&C -->
+      <article class="card card-project">
+        <div class="card-top">
+          <h3 style="margin:0; font-size: 20px;">Certificados C&C – Sistema de Gestión Corporativa</h3>
+        </div>
+        <div class="pill-group">
+          <span class="pill">PHP</span>
+          <span class="pill">MySQL</span>
+          <span class="pill">Gestión de Datos</span>
+          <span class="pill">cPanel</span>
+        </div>
+        <p style="margin: 14px 0 0 0; color: var(--muted); line-height: 1.5;">
+          Sistema desarrollado durante la práctica profesional en C&C Consultores para la generación, validación y gestión de certificados corporativos con arquitectura de base de datos relacional[cite: 1].
+        </p>
+      </article>
+
       <!-- NUAM -->
       <article class="card card-project">
         <div class="card-top">
-          <h3 style="margin:0; font-size: 20px;">NUAM – Sistema de Gestión Empresarial</h3>
+          <h3 style="margin:0; font-size: 20px;">NUAM – Sistema de Gestión Backend</h3>
         </div>
         <div class="pill-group">
           <span class="pill">Django</span>
           <span class="pill">SQLite</span>
           <span class="pill">Autenticación / Roles</span>
-          <span class="pill">REST Architecture</span>
+          <span class="pill">CRUD REST</span>
         </div>
         <p style="margin: 14px 0 0 0; color: var(--muted); line-height: 1.5;">
-          Plataforma web para administración de datos estructurados. Incorpora un sistema completo de autenticación de usuarios, permisos granulares, filtrado avanzado de información y operaciones CRUD optimizadas.
+          Plataforma web para la administración estructurada de datos. Implementa autenticación de usuarios, roles con permisos granulares y filtrado avanzado de información.
         </p>
         <div class="actions">
           <a class="btn" href="https://nuam-backend-4g9s.onrender.com/" target="_blank" rel="noopener noreferrer">Ver Demo Live →</a>
@@ -225,11 +264,11 @@
         <div class="pill-group">
           <span class="pill">Python</span>
           <span class="pill">Streamlit</span>
-          <span class="pill">IA / LLM Integración</span>
+          <span class="pill">Integración IA</span>
           <span class="pill">Automatización</span>
         </div>
         <p style="margin: 14px 0 0 0; color: var(--muted); line-height: 1.5;">
-          Herramienta interactiva impulsada por Inteligencia Artificial que procesa entradas de texto de usuarios y genera requerimientos técnicos / tickets estructurados automáticamente, reduciendo tiempos de gestión en soporte.
+          Herramienta interactiva con IA que procesa descripciones en lenguaje natural para estructurar tickets técnicos automáticamente, optimizando los tiempos de soporte.
         </p>
         <div class="actions">
           <a class="btn" href="https://nicolasmorales311096-ai-ticket-builde-app-emgeix.streamlit.app/" target="_blank" rel="noopener noreferrer">Ver Demo Live →</a>
@@ -243,13 +282,13 @@
           <h3 style="margin:0; font-size: 20px;">CinGuía – Buscador & Catálogo de Películas</h3>
         </div>
         <div class="pill-group">
-          <span class="pill">Django REST Framework</span>
+          <span class="pill">Django REST</span>
           <span class="pill">JavaScript ES6</span>
           <span class="pill">Fetch API</span>
           <span class="pill">Render</span>
         </div>
         <p style="margin: 14px 0 0 0; color: var(--muted); line-height: 1.5;">
-          Aplicación web desacoplada que consume una API REST propia para el catálogo de contenidos, permitiendo búsqueda reactiva en tiempo real y maquetación responsiva interactiva mediante JavaScript nativo.
+          Aplicación web desacoplada que consume una API REST propia para el catálogo de contenidos, con búsqueda dinámica en tiempo real e interfaz interactiva.
         </p>
         <div class="actions">
           <a class="btn" href="https://cinguia.onrender.com/" target="_blank" rel="noopener noreferrer">Ver Demo Live →</a>
@@ -260,27 +299,38 @@
 
     <!-- STACK -->
     <section id="skills" class="container">
-      <h2>Stack Tecnológico</h2>
+      <h2>Stack Tecnológico & Certificaciones</h2>
 
       <div class="grid-skills">
         <div class="skill-card">
-          <strong>Backend & Arquitectura</strong>
-          <p>Python, Django, Django REST Framework, SQL, SQLite</p>
+          <strong>Backend & Lenguajes</strong>
+          <p>PHP, Java, C#, Python, Django, Django REST Framework</p>[cite: 1]
         </div>
 
         <div class="skill-card">
-          <strong>Frontend & Interfaz</strong>
-          <p>HTML5, CSS3, JavaScript (ES6+), Fetch API, Responsive Design</p>
+          <strong>Bases de Datos</strong>
+          <p>MySQL, SQL Server, MongoDB, SQLite</p>[cite: 1]
         </div>
 
         <div class="skill-card">
-          <strong>Herramientas & Deploy</strong>
-          <p>Git, GitHub, Render, Streamlit, Metodología SCRUM</p>
+          <strong>Frontend & Web</strong>
+          <p>HTML, CSS, JavaScript (ES6+), Fetch API</p>[cite: 1]
         </div>
 
         <div class="skill-card">
-          <strong>IA & Automatización</strong>
-          <p>Integración de modelos LLM / IA, Automatización de flujos y Generación de datos</p>
+          <strong>Herramientas & Entornos</strong>
+          <p>Git, GitHub, Jira, XAMPP, cPanel, Linux, Windows Server</p>[cite: 1]
+        </div>
+      </div>
+
+      <!-- CERTIFICACIONES INACAP -->
+      <div style="margin-top: 24px;">
+        <h3 style="font-size: 18px; color: var(--accent); margin-bottom: 12px;">Certificaciones Oficiales (INACAP):</h3>
+        <div class="list-inline">
+          <span class="cert-badge">🎓 Desarrollador Full Stack</span>[cite: 1]
+          <span class="cert-badge">🎓 Diseño y Gestión de Base de Datos</span>[cite: 1]
+          <span class="cert-badge">🎓 Diseño Ágil de Sistemas</span>[cite: 1]
+          <span class="cert-badge">🎓 Soporte Computacional</span>[cite: 1]
         </div>
       </div>
     </section>
@@ -289,14 +339,15 @@
     <section id="contacto" class="container">
       <h2>Contacto</h2>
       <div class="card">
-        <p style="margin: 0 0 10px 0;"><strong>Email:</strong> <a href="mailto:nicolas.morales3196@gmail.com" class="link-soft">nicolas.morales3196@gmail.com</a></p>
-        <p style="margin: 0;"><strong>GitHub:</strong> <a href="https://github.com/NicolasMorales311096" target="_blank" rel="noopener noreferrer" class="link-soft">github.com/NicolasMorales311096</a></p>
+        <p style="margin: 0 0 10px 0;"><strong>Teléfono:</strong> <a href="tel:+56965666402" class="link-soft">(+56) 9 6566 6402</a></p>[cite: 1]
+        <p style="margin: 0 0 10px 0;"><strong>Email:</strong> <a href="mailto:nicolas.morales3196@gmail.com" class="link-soft">nicolas.morales3196@gmail.com</a></p>[cite: 1]
+        <p style="margin: 0;"><strong>GitHub:</strong> <a href="https://github.com/NicolasMorales311096" target="_blank" rel="noopener noreferrer" class="link-soft">github.com/NicolasMorales311096</a></p>[cite: 1]
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© Nicolás Morales · Digital Product Builder</p>
+    <p>© Nicolás Morales Díaz · Analista Programador & Digital Product Builder</p>[cite: 1]
   </footer>
 
 </body>
